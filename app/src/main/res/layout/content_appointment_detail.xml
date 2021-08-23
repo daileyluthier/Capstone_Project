@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appointment_detail"
+    style="?android:attr/textAppearanceLarge"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:textIsSelectable="true"
+    tools:context="com.daileymichael.tattooassistantapp.UI.Activity.AppointmentDetailActivity">
+
+    <TextView
+        android:id="@+id/appointment_customer_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Customer Name"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appointment_customer_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/appointment_title_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appointment_title_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Title"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointment_customer_label" />
+
+    <TextView
+        android:id="@+id/title_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/appointment_title_label"
+        app:layout_constraintTop_toBottomOf="@id/appointment_customer_field"/>
+
+    <TextView
+        android:id="@+id/appointment_start_date_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Start Date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/appointment_title_label"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_title_label" />
+
+    <TextView
+        android:id="@+id/appointment_start_date_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/appointment_start_time_label"
+        app:layout_constraintTop_toBottomOf="@+id/title_field" />
+
+    <TextView
+        android:id="@+id/appointment_start_time_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Start Time"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/appointment_start_date_label"
+        app:layout_constraintStart_toStartOf="@+id/appointment_start_date_label"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_start_date_label" />
+
+    <TextView
+        android:id="@+id/appointment_start_time_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/appointment_start_time_label"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_start_date_field" />
+
+    <TextView
+        android:id="@+id/appointment_end_time_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="End Time"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_start_time_label" />
+
+    <TextView
+        android:id="@+id/appointment_end_time_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/appointment_end_time_label"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_start_time_field" />
+
+    <TextView
+        android:id="@+id/appointment_description_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Description"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/appointment_end_time_label"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_end_time_label" />
+
+    <TextView
+        android:id="@+id/appointment_description_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/appointment_description_label"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_end_time_field" />
+
+    <TextView
+        android:id="@+id/appointment_price_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Price"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_description_label" />
+
+    <TextView
+        android:id="@+id/appointment_price_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/appointment_price_label"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_description_field" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

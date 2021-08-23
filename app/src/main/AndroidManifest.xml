@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.daileymichael.tattooassistantapp">
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WGUTracker">
+        <activity android:name="com.daileymichael.tattooassistantapp.UI.Activity.CalendarViewActivity" />
+        <activity
+            android:name="com.daileymichael.tattooassistantapp.UI.Activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.daileymichael.tattooassistantapp.UI.Activity.CustomerListActivity"
+            android:label="@string/title_course_list"
+            android:parentActivityName="com.daileymichael.tattooassistantapp.UI.Activity.MainActivity"
+            android:theme="@style/WGU">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daileymichael.tattooassistantapp.UI.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.daileymichael.tattooassistantapp.UI.Activity.CustomerDetailActivity"
+            android:label="@string/title_course_detail"
+            android:parentActivityName="com.daileymichael.tattooassistantapp.UI.Activity.CustomerListActivity"
+            android:theme="@style/WGU">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daileymichael.tattooassistantapp.UI.Activity.CustomerListActivity" />
+        </activity>
+        <activity
+            android:name="com.daileymichael.tattooassistantapp.UI.Activity.CustomerEditorActivity"
+            android:label="@string/title_activity_course_editor"
+            android:parentActivityName="com.daileymichael.tattooassistantapp.UI.Activity.CustomerListActivity"
+            android:theme="@style/WGU">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daileymichael.tattooassistantapp.UI.Activity.CustomerListActivity" />
+        </activity>
+        <activity
+            android:name="com.daileymichael.tattooassistantapp.UI.Activity.AppointmentListActivity"
+            android:label="@string/title_assessment_list"
+            android:parentActivityName="com.daileymichael.tattooassistantapp.UI.Activity.MainActivity"
+            android:theme="@style/WGU">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daileymichael.tattooassistantapp.UI.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.daileymichael.tattooassistantapp.UI.Activity.AppointmentDetailActivity"
+            android:label="@string/title_assessment_detail"
+            android:parentActivityName="com.daileymichael.tattooassistantapp.UI.Activity.AppointmentListActivity"
+            android:theme="@style/WGU">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daileymichael.tattooassistantapp.UI.Activity.AppointmentListActivity" />
+        </activity>
+        <activity
+            android:name="com.daileymichael.tattooassistantapp.UI.Activity.AppointmentEditorActivity"
+            android:label="@string/title_activity_assessment_editor"
+            android:parentActivityName="com.daileymichael.tattooassistantapp.UI.Activity.AppointmentListActivity"
+            android:theme="@style/WGU">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daileymichael.tattooassistantapp.UI.Activity.AppointmentListActivity" />
+        </activity>
+        <activity
+            android:name="com.daileymichael.tattooassistantapp.UI.Activity.ReportsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.daileymichael.tattooassistantapp.UI.Activity.MainActivity"
+            android:theme="@style/WGU">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daileymichael.tattooassistantapp.UI.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.daileymichael.tattooassistantapp.UI.Activity.SharingActivity"
+            android:label="@string/title_activity_sharing"
+            android:parentActivityName="com.daileymichael.tattooassistantapp.UI.Activity.MainActivity"
+            android:theme="@style/WGU">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daileymichael.tattooassistantapp.UI.Activity.MainActivity" />
+        </activity>
+
+        <receiver android:name="com.daileymichael.tattooassistantapp.Receivers.AlarmReceiver" />
+    </application>
+
+</manifest>
